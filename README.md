@@ -35,6 +35,7 @@
 	P_Size VARCHAR(2) NOT NULL,
         Gender CHAR(1) NOT NULL,
         DiscountID INT,
+	Offers VARCHAR(30),
         Cost NUMBER(5) NOT NULL,
         Quantity NUMBER(2) NOT NULL,
         Seller_id VARCHAR(6),
