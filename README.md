@@ -34,12 +34,13 @@
         Color VARCHAR(15) NOT NULL,
 	P_Size VARCHAR(2) NOT NULL,
         Gender CHAR(1) NOT NULL,
-        Commission NUMBER(2) NOT NULL,
+        DiscountID INT,
         Cost NUMBER(5) NOT NULL,
         Quantity NUMBER(2) NOT NULL,
         Seller_id VARCHAR(6),
-        PRIMARY KEY (Product_id),
-        FOREIGN KEY (Seller_id) REFERENCES Seller(Seller_id)
+        PRIMARY KEY (Product_id,DiscountID), 
+	FOREIGN KEY (DiscountID ) REFERENCES Discount(DiscountID )
+	FOREIGN KEY (Seller_id) REFERENCES Seller(Seller_id)
         ON DELETE SET NULL
     );  
        
